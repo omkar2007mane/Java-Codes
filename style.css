@@ -1,0 +1,59 @@
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #2b6cb0;
+  --muted: #6b7280;
+  --glass: rgba(255,255,255,0.8);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{background:linear-gradient(180deg,#eef2ff 0%, #f6f8fb 100%);color:#111;}
+
+.centered{display:flex;align-items:center;justify-content:center;height:100vh;padding:16px;}
+
+.card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(16,24,40,0.08);width:100%;max-width:420px}
+.auth-card h1{margin:0 0 6px;font-size:28px}
+.auth-card .muted{color:var(--muted);margin-bottom:12px}
+.auth-card label{display:block;margin-top:8px;font-weight:600;font-size:13px}
+.auth-card input{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #e6e9ef;background:#fbfdff;font-size:15px}
+
+.btn{background:var(--accent);color:white;border:none;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer;margin-top:12px;display:inline-block}
+.btn.outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn:active{transform:translateY(1px)}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+.hidden{display:none}
+.overlay{position:fixed;inset:0;background:linear-gradient(180deg, rgba(11,42,77,0.8), rgba(11,42,77,0.9));display:flex;align-items:center;justify-content:center;z-index:40}
+.splash-text{color:white;font-size:28px;font-weight:700;letter-spacing:1px}
+
+.app-container{min-height:100vh;display:flex;flex-direction:column;padding:14px;gap:12px}
+.app-header{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--card);border-radius:12px;box-shadow:0 4px 12px rgba(16,24,40,0.06)}
+.brand{font-weight:800;font-size:18px;color:var(--accent)}
+.user-info{color:var(--muted);font-weight:600}
+
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.controls label{font-size:13px;font-weight:700}
+.controls select{padding:8px;border-radius:8px;border:1px solid #e6e9ef;background:#fff}
+
+.metal{padding:8px 10px;border-radius:8px}
+.metal.active{background:var(--accent);color:#fff}
+
+.rates{display:flex;gap:12px;flex-wrap:wrap}
+.rate-card{flex:1;min-width:180px;background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+.rate-title{font-size:13px;color:var(--muted);font-weight:700}
+.rate-value{font-size:22px;font-weight:800;margin-top:8px}
+.rate-change{font-size:13px;margin-top:6px}
+
+.chart-section{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+canvas{width:100% !important;max-height:320px}
+
+.footer{text-align:center;padding:6px;color:var(--muted);font-size:13px}
+
+/* responsive tweaks */
+@media (max-width:520px){
+  .auth-card{padding:16px}
+  .splash-text{font-size:22px}
+  .rate-value{font-size:20px}
+}
